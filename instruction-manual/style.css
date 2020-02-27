@@ -1,0 +1,209 @@
+@page:first {
+    @top-left {
+        content: "";
+        background-image:  url('../_images/pasco_logo.png');
+        background-repeat: no-repeat;
+        background-size: auto 0.5in;
+        background-position: 0in 0.4in;
+    }
+    @top-right {
+        content: string(doctitle) " Product Manual";
+        font: 10pt sans-serif;
+        border-bottom: solid 1px;
+        margin-bottom: 0.1in;
+        vertical-align: bottom;
+        padding-bottom: 0.1in;
+        width: 3.0in;
+    }
+}
+
+@page {
+    size: letter portrait;
+    margin-top: 1in;
+    margin-bottom: 1in;
+    margin-left: 0.5in;
+    margin-right: 0.5in;
+
+    @top-left {
+        content: string(doctitle)  " Product Manual";
+        font: 10pt sans-serif;
+        border-bottom: solid 1px;
+        margin-bottom: 0.1in;
+        vertical-align: bottom;
+        padding-bottom: 0.1in;
+    }
+    
+    @bottom-right {
+        content: "Page " counter(page) " of " counter(pages);
+        font: 10pt sans-serif;
+        border-top: 1px solid black;
+        margin-top: 0.1in;
+        padding-top: 0.1in;
+        vertical-align: top;
+    }
+
+    @bottom-center {
+        content: string(doc_number);
+        font: 10pt sans-serif;
+        width: 1.5in;
+        border-top: 1px solid black;
+        margin-top: 0.1in;
+        padding-top: 0.1in;
+        vertical-align: top;
+    }
+
+    @bottom-left {
+        content: "";
+        background-image:  url('../_images/pasco_logo.png');
+        background-repeat: no-repeat;
+        background-size: auto 0.25in;
+        background-position: 0in 0.05in;
+        border-top: 1px solid black;
+        margin-top: 0.1in;
+        }
+}
+
+/* Feature Testing */
+.nested0 .document_number { /* create a string for the doc number to place in the footer */
+    string-set: doc_number content();
+    display: none;
+}
+.nested0 .item_number { /* create a string for the item number. Currently not used for anything */
+    display: none;
+}
+
+/* Strings */
+.coverPage-title {
+    string-set: doctitle content();
+}
+
+/* Body Styles */
+nav, .coverPageContainer {
+    display: none;
+}
+
+html {
+    column-count: 2;
+    column-gap: 0.5in;
+}
+
+h1, .nested0 > .body {
+    column-span: all;
+}
+
+h1, h2, h3 {
+    break-after: avoid;
+    margin-top: 0pt;
+    margin-bottom: 6pt;
+}
+
+p, div, table {
+    margin-top: 0pt;
+    margin-bottom: 6pt;
+}
+
+td > p, td > ul {
+    margin: 0pt;
+}
+
+h1 {
+    font-size: 24pt;
+    font-family: ‘Helvetica Neue LT Std’;
+    text-align: center;
+}
+
+h2{
+    font: bold 16pt sans-serif;
+}
+
+h3 {
+    font: bold 12pt sans-serif;
+}
+
+body {
+    font: 10pt serif;
+    text-align: justify;
+    orphans: 2;
+    widows: 2;
+}
+
+img {
+    prince-image-resolution: auto;
+    /*filter: grayscale(100%);*/   /* this causes SVG images to pixelate */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figure {
+    break-inside: avoid;
+    display: table;
+}
+
+figure.float-left {
+    float: left;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+figcaption {
+    font-size: 9pt;
+    display: table-caption;
+    caption-side: bottom;
+}
+
+ol, ul {
+    margin-left: 2em;
+}
+
+li {
+     break-inside: avoid;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: left;
+    break-inside: avoid;
+    width: 100%;
+}
+td {
+    vertical-align: top;
+    border-bottom: 1px solid gray;
+    padding: 0.3em;    
+}
+
+td > ul {
+    list-style-type: none;
+}
+
+.note__title {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.note {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0.5em;
+}
+
+/* Tech Support Style */
+.tech_support {
+    break-inside: avoid;
+}
+.tech_support td, pre {
+    font: 10pt serif;
+}
+
+/* Regulatory styles */
+article.regulatory {
+    break-before: column;
+}
+
+.regulatory h2 {
+    display: none;
+}
+
+.regulatory p {
+    font-size: 8pt;
+}
