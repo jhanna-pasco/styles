@@ -344,4 +344,22 @@ article.data-collection .lcQuestion2 {
 article.data-collection .lcQuestion2 figcaption {
     caption-side: top;
 }
-/*SPECIALIZED STYLES*/
+
+/* Tech Support Style */
+.tech_support {
+    break-inside: avoid;
+}
+.tech_support caption {
+  display: none;
+}
+.tech_support td, pre {
+    font: 10pt serif;
+}
+.tech_support td {
+  vertical-align: top;
+  padding: 0.3em;
+  border: none;
+}
+.tech_support p {
+  margin: 0pt;
+}
