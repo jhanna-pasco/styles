@@ -1,0 +1,228 @@
+/* PAGE LAYOUT */
+@page {
+    size: letter portrait;
+    margin-top: 0.75in;
+    margin-bottom: 0.75in;
+}
+@page:left {
+    margin-left: 0.75in;
+    margin-right: 1.25in;
+
+        @top-left {
+            content: string(doctitle);
+            border-bottom: dotted;
+            font: 10pt Arial;
+            text-transform: uppercase;
+            vertical-align: bottom;
+            padding-bottom: 0.5em;
+            margin-bottom: 12pt;
+        }
+
+        @bottom-left {
+        content: counter(page) "      PASCO" ;
+        white-space: pre;
+        border-top: dotted;
+        font: 8pt Arial;
+        vertical-align: top;
+        padding-top: 0.5em;
+        margin-top: 12pt;
+        }
+}
+@page:right {
+    margin-left: 1.25in;
+    margin-right: 0.75in;
+  
+        @top-right {
+            content: string(doctitle);
+            border-bottom: dotted;
+            font: 10pt Arial;
+            text-transform: uppercase;
+            vertical-align: bottom;
+            padding-bottom: 0.5em;
+            margin-bottom: 12pt;
+        }
+
+    @bottom-right {
+        content: "PASCO      " counter(page);
+        white-space: pre;
+        border-top: dotted;
+        font: 8pt Arial;
+        vertical-align: top;
+        padding-top: 0.5em;
+        margin-top: 12pt;
+    }
+}
+
+/* STRINGS */
+.topictitle1 {
+    string-set: doctitle content();
+}
+
+/* HIDE UNNECESSARY CONTENT */
+nav, .shortdesc, .coverPage-title {
+    display: none;
+}
+
+/* DEFAULT STYLES */
+html * {
+    font-family: "Century Schoolbook";
+    font-size: 10pt;
+    margin-top: 0pt;
+    margin-bottom: 0pt;
+}
+
+/* TOPIC TITLES */
+.topictitle1, .topictitle2, .topictitle3 {
+    font-family: Arial;
+    margin-bottom: 0pt;
+    page-break-after: avoid;
+}
+.topictitle1 {
+    font-size: 20pt;
+    font-weight: lighter;
+    text-transform: uppercase;
+    margin-top: 12pt;
+    margin-bottom: 12pt;
+}
+.topictitle2 {
+    font-size: 13pt;
+    margin-top: 15pt;
+}
+.topictitle3 {
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 12pt;
+}
+
+/* BODY */
+p {
+    margin-top: 6pt;
+}
+ol p, ul p {
+    margin-top: 0pt;
+}
+
+/* IMAGES AND FIGURES */
+img {
+    prince-image-resolution: auto;
+}
+figure {
+    display: table;
+    page-break-inside: avoid;
+    margin-left: auto;
+    margin-right: auto;
+}
+figure.float-right {
+    float: right;
+    margin: 0.25in;
+    margin-right: 0in;
+}
+figcaption {
+    font-size: 9pt;
+    display: table-caption;
+    caption-side: bottom;
+}
+figcaption span {
+    font-size: 9pt;
+}
+
+/* NOTES */
+.note {
+    font-style: italic;
+    margin-top: 6pt;
+}
+
+/* LISTS */
+ul, ol {
+    margin-left: 15pt;
+}
+li {
+    page-break-inside: avoid;
+}
+ul li {
+    margin-top: 6pt;
+}
+ol li {
+    margin-top: 12pt;
+}
+.materials ul {
+    column-count: 2;
+}
+.materials ul li {
+    margin-top: 2pt;
+}
+dl {
+    page-break-inside: avoid;
+}
+dt {
+    font-style: italic;
+    margin-top: 12pt;
+}
+
+/* TABLES */
+table {
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 3pt;
+    height: 0.36in;
+}
+th {
+    background-color: lightgray;
+    font-family: Arial;
+}
+th * {
+    font-family: Arial;
+}
+td {
+    font-size: 9pt;
+    text-align: center;
+}
+caption {
+    font-size: 9pt;
+    text-align: left;
+}
+caption span {
+    font-size: 9pt;
+}
+
+/* TECHNICAL SUPPORT STYLE */
+.tech_support {
+    break-inside: avoid;
+}
+.tech_support caption {
+  display: none;
+}
+.tech_support td {
+  font: 10pt serif;
+  vertical-align: top;
+  text-align: left;
+  padding: 0.3em;
+  border: none;
+}
+.tech_support p {
+  margin: 0pt;
+}
+
+/* LEARNING AND TRAINING ELEMENTS */
+.lcOpenQuestion2 {
+    display: list-item;
+    list-style-type: decimal;
+    margin-left: 0.1in;
+    padding-left: 1em;
+    page-break-inside: avoid;
+    margin-top: 12pt;
+}
+.lcOpenAnswer2 {
+    font: 9pt Arial;
+    margin-top: 3pt;
+    margin-bottom: 3pt;
+}
+
+/* LEARNING AND TRAINING ELEMENTS - DATA COLLECTION */
+.data-collection .lcOpenQuestion2 {
+    display: block;
+    margin-left: 0in;
+    padding-left: 0in;
+}
