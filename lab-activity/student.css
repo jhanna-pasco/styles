@@ -1,0 +1,39 @@
+.lcOpenAnswer2 {
+    display: none;
+}
+.one-line::after, .two-lines::after, .three-lines::after, .drawing::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 0.33in;
+}
+
+.one-line::after {
+    height: 0.33in;
+}
+
+.two-lines::after {
+    height: 0.67in;
+}
+
+.three-lines::after {
+    height: 1.00in;
+}
+
+.drawing::after {
+    height: 3.00in;
+}
+@page:first {
+    
+    @top-left {
+        content: "NAME                                                                                           PERIOD                            DATE";
+        white-space: pre;
+        border-bottom: dotted;
+        vertical-align: bottom;
+        font: 10pt Arial;
+        padding-bottom: 3pt;
+    }
+    @top-right {
+        content: "";
+    }
+}
