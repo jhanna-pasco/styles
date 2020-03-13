@@ -111,6 +111,16 @@ ol p, ul p {
 img {
     prince-image-resolution: auto;
 }
+img.imagecenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Make all inline images the same height. */
+img:not(.imagecenter) {
+    height: 1.5em;
+    vertical-align: text-bottom;
+}
 figure {
     display: table;
     margin-left: auto;
