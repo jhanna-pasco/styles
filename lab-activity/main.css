@@ -71,6 +71,11 @@ html * {
     margin-bottom: 0pt;
 }
 
+/* PAGE BREAK AVOIDANCE */
+.materials, figure, dl, li, .lcOpenQuestion2, .lcSingleSelect2 {
+    page-break-inside: avoid;
+}
+
 /* TOPIC TITLES */
 .topictitle1, .topictitle2, .topictitle3 {
     font-family: Arial;
@@ -106,9 +111,18 @@ ol p, ul p {
 img {
     prince-image-resolution: auto;
 }
+img.imagecenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Make all inline images the same height. */
+img:not(.imagecenter) {
+    height: 1.5em;
+    vertical-align: text-bottom;
+}
 figure {
     display: table;
-    page-break-inside: avoid;
     margin-left: auto;
     margin-right: auto;
 }
@@ -136,9 +150,6 @@ figcaption span {
 ul, ol {
     margin-left: 15pt;
 }
-li {
-    page-break-inside: avoid;
-}
 ul li {
     margin-top: 6pt;
 }
@@ -150,9 +161,6 @@ ol li {
 }
 .materials ul li {
     margin-top: 2pt;
-}
-dl {
-    page-break-inside: avoid;
 }
 dt {
     font-style: italic;
@@ -211,13 +219,15 @@ caption span {
     list-style-type: decimal;
     margin-left: 0.1in;
     padding-left: 1em;
-    page-break-inside: avoid;
     margin-top: 12pt;
 }
 .lcOpenAnswer2 {
     font: 9pt Arial;
     margin-top: 3pt;
     margin-bottom: 3pt;
+}
+.lcAnswerOptionGroup2 {
+    list-style-type: lower-alpha;
 }
 
 /* LEARNING AND TRAINING ELEMENTS - DATA COLLECTION */
