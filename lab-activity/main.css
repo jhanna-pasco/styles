@@ -173,6 +173,9 @@ dt {
 /* TABLES */
 table {
     border-collapse: collapse;
+    margin-top: 6pt;
+    margin-left: auto;
+    margin-right: auto;
 }
 th, td {
     border: 1px solid black;
@@ -190,9 +193,14 @@ td {
     font-size: 9pt;
     text-align: center;
 }
+td .answer {
+    font-size: 9pt;
+    font-family: sans-serif;
+}
 caption {
     font-size: 9pt;
     text-align: left;
+    margin-bottom: 3pt;
 }
 caption span {
     font-size: 9pt;
