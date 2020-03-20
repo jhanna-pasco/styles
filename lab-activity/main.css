@@ -54,7 +54,7 @@
 }
 
 /* STRINGS */
-.topictitle1 {
+h1 {
     string-set: doctitle content();
 }
 
@@ -80,23 +80,23 @@ sub, sup {
 }
 
 /* TOPIC TITLES */
-.topictitle1, .topictitle2, .topictitle3 {
+h1, h2, h3 {
     font-family: Arial;
     margin-bottom: 0pt;
     page-break-after: avoid;
 }
-.topictitle1 {
+h1 {
     font-size: 20pt;
     font-weight: lighter;
     text-transform: uppercase;
     margin-top: 12pt;
     margin-bottom: 12pt;
 }
-.topictitle2 {
+h2 {
     font-size: 13pt;
     margin-top: 15pt;
 }
-.topictitle3 {
+h3 {
     font-weight: bold;
     font-style: italic;
     margin-top: 12pt;
