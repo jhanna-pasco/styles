@@ -1,0 +1,64 @@
+@page:first {
+    @top-left {
+        content: "";
+        background-image:  url("https://jhanna-pasco.github.io/styles/instruction-manual/pasco_logo.png");
+        background-repeat: no-repeat;
+        background-size: auto 0.5in;
+        background-position: 0in 0.4in;
+    }
+    @top-right {
+        content: string(doctitle) " Product Manual";
+        font: 10pt sans-serif;
+        border-bottom: solid 1px;
+        margin-bottom: 0.1in;
+        vertical-align: bottom;
+        padding-bottom: 0.1in;
+        width: 3.0in;
+    }
+}
+
+@page {
+    size: letter portrait;
+    margin-top: 1in;
+    margin-bottom: 1in;
+    margin-left: 0.5in;
+    margin-right: 0.5in;
+
+    @top-left {
+        content: string(doctitle)  " Product Manual";
+        font: 10pt sans-serif;
+        border-bottom: solid 1px;
+        margin-bottom: 0.1in;
+        vertical-align: bottom;
+        padding-bottom: 0.1in;
+    }
+    
+    @bottom-right {
+        content: "Page " counter(page) " of " counter(pages);
+        font: 10pt sans-serif;
+        border-top: 1px solid black;
+        margin-top: 0.1in;
+        padding-top: 0.1in;
+        vertical-align: top;
+    }
+
+    @bottom-center {
+        content: string(doc_number);
+        font: 10pt sans-serif;
+        width: 1.5in;
+        border-top: 1px solid black;
+        margin-top: 0.1in;
+        padding-top: 0.1in;
+        vertical-align: top;
+    }
+
+    @bottom-left {
+        content: "";
+        background-image:  url("https://jhanna-pasco.github.io/styles/instruction-manual/pasco_logo.png");
+        background-repeat: no-repeat;
+        background-size: auto 0.25in;
+        background-position: 0in 0.05in;
+        border-top: 1px solid black;
+        margin-top: 0.1in;
+        }
+}
