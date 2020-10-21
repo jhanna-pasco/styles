@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.oxygenxml.com/ns/extension http://www.oxygenxml.com/ns/extension/extensions.xsd">
     <xt:extension id="dita-extension">
-        <xt:location href="https://bitbucket.org/pascosoftware/add-on_test/raw/f203722ed15c31d84895b491e908b2a24966fa6b/dita_extension.zip"/>
+        <xt:location href="https://bitbucket.org/pascosoftware/add-on_test/get/master.zip"/>
         <xt:version>1.1.0</xt:version>
         <xt:oxy_version>18.0+</xt:oxy_version>
         <xt:type>framework</xt:type>
